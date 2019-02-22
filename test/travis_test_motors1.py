@@ -36,7 +36,7 @@ class MotorTest(unittest.TestCase):
 		pub.publish(m)
 		time.sleep(0.1)
 
-	   self.file_check("rtmotor_raw_lo",200,"wrong left value from cmd_vel  ")
+	   self.file_check("rtmotor_raw_lo",200,"wrong left value from cmd_vel")
            self.file_check("rtmotor_raw_ro",600,"wrong right value from cmd_vel")
 
 	   time.sleep(1.1)
