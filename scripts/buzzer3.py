@@ -14,6 +14,6 @@ def recv_buzzer(data):
         write_freq(data.data)
 
 if __name__ == '__main__':
-	rospy.init_node('buzzer')
-	rospy.Subscriber("buzzer",UInt16,recv_buzzer)
-	rospy.spin()
+    rospy.init_node('buzzer')
+    rospy.Subscriber("buzzer",UInt16,recv_buzzer)
+    rospy.spin()
