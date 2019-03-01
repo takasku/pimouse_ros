@@ -15,16 +15,17 @@ class WallStopTest(unittest.TestCase):
              open("/dev/rtmotor_raw_r0","r") as rf:
             left = int(lf.readline().rstrip())
             right = int(rf.readline().rstrip())
+
         return left, right
 
     def test_io(self):
-        left, right = self.set_and_get(400,100,100,0)
+        left, right = self.set_and_get(400.0,100.0,100.0,0.0)
         self.assertTrue(left == 0 and right == 0,"cannot stop")
 
-        left, right = self.set_and_get(400,0,0,99)
+        left, right = self.set_and_get(400.0,0.0,0.0,99.0)
         self.assertTrue(left != 0 and right != 0,"cannot move again")
 
-        left, right = self.set_and_get(150,0,200,150)
+        left, right = self.set_and_get(150.0,0.0,200.0,150.0)
         self.assertTrue(left == 0 and right == 0,"cannot stop")
 
 if __name__ == '__main__':
