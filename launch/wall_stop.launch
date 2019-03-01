@@ -1,0 +1,6 @@
+<launch>
+ <node pkg="pimouse_ros" name="wall_stop" type="wall_stop.py" required="true" />
+
+ <test test-name="test_wall_stop" pkg="pimouse_ros" type="travis_test_wall_stop.py" />
+</launch>
+
