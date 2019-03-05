@@ -19,13 +19,13 @@ class WallStopTest(unittest.TestCase):
         return left, right
 
     def test_io(self):
-        left, right = self.set_and_get('400','100','100','0')
+        left, right = self.set_and_get(400 100 100 0)
         self.assertTrue(left == 0 and right == 0,"cannot stop")
 
-        left, right = self.set_and_get('400','0','0','90')
+        left, right = self.set_and_get(400 0 0 90)
         self.assertTrue(left != 0 and right != 0,"cannot move again")
 
-        left, right = self.set_and_get('150','0','200','150')
+        left, right = self.set_and_get(150 0 200 150)
         self.assertTrue(left == 0 and right == 0,"cannot stop")
 
 if __name__ == '__main__':
